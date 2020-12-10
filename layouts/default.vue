@@ -1,8 +1,22 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="">
+    <Header class="header"/>
+    <sideBar class="side"/>
+    <nuxt />
   </div>
 </template>
+
+<script>
+import Header from '~/components/Header.vue'
+import sideBar from '~/components/sideBar.vue'
+
+export default {
+  components: {
+    Header,
+    sideBar
+  }
+}
+</script>
 
 <style>
 html {
@@ -16,38 +30,126 @@ html {
   box-sizing: border-box;
 }
 
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+img {
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0;
+}
+
 *, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+@media screen and (max-width: 768px) {
+  .side {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .header {
+    display: none;
+  }
+  .side {
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>
 
